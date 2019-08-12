@@ -1,0 +1,5 @@
+<permissions>
+        <privapp-permissions package="com.sec.android.mimage.gear360editor">
+            <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+        </privapp-permissions>        
+</permissions>

@@ -1,0 +1,11 @@
+<permissions>
+    <privapp-permissions package="com.android.settings">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.SHUTDOWN"/>
+        <permission name="com.samsung.android.spdclient.permission"/>
+        <permission name="com.samsung.android.fota.permission.READ_DATABASES"/>
+        <permission name="com.samsung.android.permission.MODIFY_THEME"/>
+        <permission name="com.samsung.android.provider.indexing.permission.ACCESS_PROVIDER"/>
+    </privapp-permissions>
+</permissions>

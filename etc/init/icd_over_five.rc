@@ -1,0 +1,38 @@
+# icd_tz_drm
+service icd_tz_drm /system/bin/icd_tz_drm
+    class main
+    user system
+    group system log
+    disabled
+    oneshot
+
+# icd_fido
+service icd_fido /system/bin/icd_fido
+    class main
+    user system
+    group system log
+    disabled
+    oneshot
+
+# icd_cc
+service icd_cc /system/bin/icd_cc
+    class main
+    user system
+    group system log
+    disabled
+    oneshot
+
+# icd_etc
+service icd_etc /system/bin/icd_etc
+    class main
+    user system
+    group system log
+    disabled
+    oneshot
+
+on early-fs
+# start icd before vold
+    start icd_tz_drm
+    start icd_fido
+    start icd_cc
+    start icd_etc

@@ -1,0 +1,14 @@
+service vold /system/bin/vold \
+        --blkid_context=u:r:blkid:s0 --blkid_untrusted_context=u:r:blkid_untrusted:s0 \
+        --fsck_context=u:r:fsck:s0 --fsck_untrusted_context=u:r:fsck_untrusted:s0
+    class core
+    ioprio be 2
+    onrestart restart zygote
+## Frigatebird
+    socket frigate stream 0660 system system
+    writepid /dev/cpuset/foreground/tasks
+    shutdown critical
+    group root reserved_disk
+## Samsung ODE >>>
+    socket dir_enc_report stream 0660 root mount
+## Samsung ODE <<<

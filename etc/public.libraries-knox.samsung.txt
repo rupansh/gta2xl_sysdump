@@ -1,0 +1,2 @@
+libremotedesktop_client.knox.samsung.so
+libknox_remotedesktopclient.knox.samsung.so

@@ -1,0 +1,5 @@
+libSEF.quram.so
+libatomcore.quram.so
+libatomjpeg.quram.so
+libagifencoder.quram.so
+libimagecodec.quram.so

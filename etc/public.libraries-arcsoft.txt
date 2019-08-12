@@ -1,0 +1,2 @@
+libArcSoft3DStickerEngine.arcsoft.so
+libArcSoftFaceAlignment.arcsoft.so

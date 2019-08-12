@@ -1,0 +1,17 @@
+# SA, System SW, SAMSUNG
+# allow remain reset info in RR.p
+# change to start service
+service resetreason /system/bin/resetreason
+    class main
+    user system
+    group system
+    disabled
+    oneshot
+
+on post-fs-data
+    mkdir /data/misc/reboot 0700 system system
+
+on init
+    # reset_reason
+    chown system system /proc/reset_reason
+    chmod 0600 /proc/reset_reason

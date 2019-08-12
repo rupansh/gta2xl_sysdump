@@ -1,0 +1,17 @@
+service netd /system/bin/netd
+    class main
+    socket netd stream 0660 root system
+    socket dnsproxyd stream 0660 root inet
+# KNOX NPA - START
+    socket napproxyd stream 0660 root inet
+# KNOX NPA - END
+    socket mdns stream 0660 root system
+    socket fwmarkd stream 0660 root inet
+#< RNTFIX:: QoS
+    socket qosd stream 0660 root radio
+#> RNTFIX
+#< RNTFIX:: Debugging for DNS query
+    group root readproc
+#> RNTFIX
+    onrestart restart zygote
+    onrestart restart zygote_secondary

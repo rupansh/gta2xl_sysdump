@@ -1,0 +1,6 @@
+ <permissions>
+        <privapp-permissions package="com.osp.app.signin">
+            <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+            <permission name="android.permission.REAL_GET_TASKS"/>
+        </privapp-permissions>
+ </permissions>

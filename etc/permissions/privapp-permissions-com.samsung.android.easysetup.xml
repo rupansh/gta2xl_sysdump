@@ -1,0 +1,11 @@
+<permissions>
+        <privapp-permissions package="com.samsung.android.easysetup">
+            <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
+            <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+            <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+            <permission name="android.permission.SET_PROCESS_LIMIT"/>
+            <permission name="android.permission.sec.ACCESS_WIFI_SECURED_INFO"/>
+            <permission name="android.permission.ACCESS_FINE_LOCATION"/>
+            <permission name="com.samsung.permission.SEM_ACCESS_WIFI_SECURED_INFO"/>
+        </privapp-permissions>
+</permissions>

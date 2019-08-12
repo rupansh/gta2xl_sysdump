@@ -1,0 +1,24 @@
+service multiclient-daemon /system/bin/multiclientd
+    class main
+    user radio
+    group radio cache inet misc log readproc sdcard_rw
+
+service multiclient-daemon1 /system/bin/multiclientd -c 2
+    class main
+    user radio
+    group radio cache inet misc log readproc sdcard_rw
+
+on property:ro.multisim.simslotcount=1
+    stop multiclient-daemon1
+
+on property:init.svc.ril-daemon=stopped
+   stop multiclient-daemon
+
+on property:init.svc.ril-daemon1=stopped
+   stop multiclient-daemon1
+   
+on property:init.svc.ril-daemon=running
+   start multiclient-daemon
+
+on property:init.svc.ril-daemon1=running
+   start multiclient-daemon1
